@@ -2,13 +2,13 @@ package aprender.poo;
 import java.util.Scanner;
 
 public class Animal {
-     public String nome;
-     public String classeAnimal;
-     public String familia;
-     public Integer idade;
-     public boolean estado;
-     public Integer caloria;
-     public Integer forca;
+     private String nome;
+     private String classeAnimal;
+     private String familia;
+     private Integer idade;
+     private boolean estado;
+     private Integer caloria;
+     private Integer forca;
 
      public String getNome() {
          return nome;
@@ -58,6 +58,8 @@ public class Animal {
      public void nascer() {
         System.out.println("Qual o nome do animal?");
         nome = entrada.next();
+        System.out.println("Qual a idade do animal?");
+        idade = entrada.nextInt();
         System.out.println("Qual a classe do animal?");
         classeAnimal = entrada.next();
         System.out.println("Qual o nome da familia?");
@@ -94,10 +96,10 @@ public class Animal {
         }
      }
      
-     public void mostrar() {
-        System.out.println("Nome: " + nome + ", Classe: " + classeAnimal + ", Família: " + familia +
+     public String mostrar() {
+        return "Nome: " + nome + ", Classe: " + classeAnimal + ", Família: " + familia +
                            ", Idade: " + idade + ", Estado: " + estado + ", Caloria: " + caloria +
-                           ", Força: " + forca);
+                           ", Força: " + forca;
     }
 
      public Animal() {

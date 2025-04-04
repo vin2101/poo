@@ -16,25 +16,42 @@ public class PooApplication {
 		Animal animal = new Animal();
 
 
-		while (indice != 7) {
-			System.out.println("Escolha uma função (Digite um número de 1 a 6):");
+		while (indice != 6) {
+			
+            System.out.println("1-Nascer");
+            System.out.println("2-Morrer");
+            System.out.println("3-Comer");
+            System.out.println("4-Correr");
+            System.out.println("5-Dormir");
+			System.out.println("6-Sair");
+            System.out.println("Selecione a opção desejada:");
+
 			indice = entradaUsuario.nextInt(); 
 			switch (indice) {
 				case 1:
 				animal.nascer();
+				System.out.println(animal.mostrar());
+				break;
 				case 2: 
 				animal.morrer();
+				System.out.println(animal.mostrar());
+				break;
 				case 3: 
 				animal.comer();
+				System.out.println(animal.mostrar());
+				break;
 				case 4: 
 				animal.correr();	
+				System.out.println(animal.mostrar());
+				break;
 				case 5:
 				animal.dormir();
-				case 6: 
-				animal.mostrar();
-				case 7: 
-					break;
+				System.out.println(animal.mostrar());
+				break;
+				case 6: 				
+				break;
+
 			}
 		}
 	}
-}
+	}
